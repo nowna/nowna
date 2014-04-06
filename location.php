@@ -62,7 +62,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         var myMarker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            title: Marker<?php echo $val; ?>
+            title: 'Marker<?php echo $val; ?>'
         });
 
         //var theirMarker = new google.maps.Marker({
