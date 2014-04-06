@@ -11,7 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-8qQw6BCorqyWEkV5psNf9q2SvrpIf4Y&v=3.exp&sensor=false"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC-8qQw6BCorqyWEkV5psNf9q2SvrpIf4Y&v=3.exp&sensor=false"></script>
     <script src="js/functions.js"></script>
 </head>
 <body>
