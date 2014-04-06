@@ -26,6 +26,7 @@ $tjson = json_decode($resp, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="js/geo.js"></script>
+    <script src="js/ajax.js"></script>
 </head>
 <body>
 	<header>
