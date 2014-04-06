@@ -1,5 +1,5 @@
 <?php
-  require_once('config.php'); //contains $settings variable for the API
+require_once('config.php'); //contains $settings variable for the API
 ?>
 
 <!DOCTYPE HTML>
@@ -47,12 +47,13 @@
 
         $url = "https://api.twitter.com/1.1/search/tweets.json";
         $requestMethod = "GET";
-        $getfield = '?q=&';
+        $getfield = '?q=&geocode=40.7484,73.9857,10mi';
 
         $twitter = new TwitterAPIExchange($twitterSettings);
         echo $twitter->setGetfield($getfield)
                      ->buildOauth($url, $requestMethod)
                      ->performRequest();
+
         ?>
 
         <div class="container">
