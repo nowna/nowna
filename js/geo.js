@@ -1,5 +1,7 @@
 function getLocation()
 {
+    $('.intro').hide();
+
     if (navigator.geolocation)
     {
         console.log("geolocation is working!");
@@ -9,7 +11,6 @@ function getLocation()
     {
         console.log("No geolocation");
     }
-
 }
 
 function showPosition(position)
