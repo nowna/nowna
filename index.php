@@ -42,6 +42,19 @@
 
     <div id="index">
       <div class="pad40 intro">
+
+  <?php
+
+  $url = "https://api.twitter.com/1.1/search/tweets.json";
+  $requestMethod = "GET";
+  $getfield = '?q=social';
+
+  $twitter = new TwitterAPIExchange($settings);
+  echo $twitter->setGetfield($getfield)
+               ->buildOauth($url, $requestMethod)
+               ->performRequest();
+  ?>
+
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
