@@ -13,9 +13,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/functions.js"></script>
-    <script>
-    google.maps.event.addDomListener(document.getElementById('showButton'), 'onclick', initialize);
-    </script>
 </head>
 <body>
 	<header>

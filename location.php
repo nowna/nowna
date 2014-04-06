@@ -38,6 +38,37 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         <?php echo linkify_usernames($status['text']); ?>
       </span>
     </div>
+
+    <script>
+    function initialize() {
+        var myLatitude = navigator.geolocation.coords.latitude;
+        var myLongitude = navigator.geolocation.coords.longitude;
+
+        var myLatLng = new google.maps.LatLng(myLatitude, myLongitude);
+        //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
+
+        var mapOptions = {
+            zoom: 15,
+            center: myLatLng,
+            disableDefaultUI: true
+        }
+
+        var map = new google.maps.Map(document.getElementById('map-canvas<?php echo $val; ?>'), mapOptions);
+
+        var myMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: Marker<?php echo $val; ?>
+        });
+
+        //var theirMarker = new google.maps.Marker({
+        //    position: theirLatlng,
+        //    map: map,
+        //    title: 'Them'
+        //});
+    }
+    </script>
+
     <div id="map-canvas<?php echo $val ?>"></div>
    </div>
 </div>
