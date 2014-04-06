@@ -43,6 +43,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
+              <img src="http://nowna.net/impatientbanana/images/impatientbananaalone.svg" style="float:right;width:25%">
               <h1 class="huge center ts">Discover events near you</h1>
               <h2 class="huge center ts pad10bot">based on Twitter.</h2>
               <button type="button" class="btn btn-success btn-lg removeWhiteSpace" onclick="getLocation()" id="showButton">
