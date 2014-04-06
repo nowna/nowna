@@ -13,6 +13,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/functions.js"></script>
+    <script>
+    google.maps.event.addDomListener(#showButton, 'click', initializeMap);
+    </script>
 </head>
 <body>
 	<header>
@@ -45,7 +48,7 @@
             <div class="col-sm-12">
               <h1 class="huge center ts">Discover events near you</h1>
               <h2 class="huge center ts pad10bot">based on Twitter.</h2>
-              <button type="button" class="btn btn-success btn-lg removeWhiteSpace" onclick="getLocation()">
+              <button type="button" class="btn btn-success btn-lg removeWhiteSpace" onclick="getLocation()" id="showButton">
                 Show me what's happening NowNa &raquo;
               </button>
             </div>
