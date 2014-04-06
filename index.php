@@ -52,7 +52,37 @@
           </div>
         </div>
       </div>
-    </div>
+
+      <div class="container">
+        <!-- Tweets go here -->
+        <div class="row">
+          <div class="col-sm-12 tweetwrapper">
+            <img src="http://da.gd/image/73x73.png?text=x" alt="40x40" class="img-responsive img-thumbnail" />
+            <span class="tweet">
+              This is a tweet. foo bar baz buzz.
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 tweetwrapper">
+            <img src="http://da.gd/image/73x73.png?text=x" alt="40x40" class="img-responsive img-thumbnail" />
+            <span class="tweet">
+              This is a tweet. foo bar baz buzz.
+            </span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 tweetwrapper">
+            <img src="http://da.gd/image/73x73.png?text=x" alt="40x40" class="img-responsive img-thumbnail" />
+            <span class="tweet">
+              This is a tweet. foo bar baz buzz.
+            </span>
+          </div>
+        </div>
+        <!-- end tweets -->
+      </div>
 
     <footer>
       <div class="container">
