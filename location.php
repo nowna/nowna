@@ -25,12 +25,10 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
 <div class="row tweetwrapper">
    <div class="col-sm-12">
      <div class="pull-left">
-      <div class="avatar">
        <img src="<?php echo $status['user']['profile_image_url']; ?>"
             alt="<?php echo $status['user']['screen_name']; ?>"
             title="<?php echo $status['user']['screen_name']; ?>"
-            class="img-responsive img-thumbnail" />
-      </div>
+            class="img-responsive img-thumbnail avatar" />
        <span class="tweet" title="<?php echo $status['created_at']; ?>">
          <a href="https://twitter.com/<?php echo $status['user']['screen_name']; ?>">
            @<?php echo $status['user']['screen_name']; ?>

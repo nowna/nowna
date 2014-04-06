@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="js/tabs.js"></script>
     <script src="js/geo.js"></script>
 </head>
 <body>
@@ -51,32 +52,32 @@
         </div>
       </div>
 
-      <div id="wrapper">
-        <div id="tabContainer">
-          <div class="tabs">
-            <ul>
-              <li id="tabHeader_1">Page 1</li>
-              <li id="tabHeader_2">Page 2</li>
-              <li id="tabHeader_3">Page 3</li>
-            </ul>
-          </div>
-          <div class="tabscontent">
-
-            <div class="tabpage" id="tabpage_1">
-              <div id="tweet_box" class="container"></div>
+      <div class="container">
+        <div id="wrapper">
+          <div id="tabContainer">
+            <div class="tabs">
+              <ul>
+                <li id="tabHeader_1">Page 1</li>
+                <li id="tabHeader_2">Page 2</li>
+                <li id="tabHeader_3">Page 3</li>
+              </ul>
             </div>
+            <div class="tabscontent">
 
-            <div class="tabpage" id="tabpage_2">
+              <div class="tabpage" id="tabpage_1">
+                <div id="tweet_box" class="container"></div>
+              </div>
+
+              <div class="tabpage" id="tabpage_2">
+              </div>
+
+              <div class="tabpage" id="tabpage_3">
+              </div>
+
             </div>
-
-            <div class="tabpage" id="tabpage_3">
-            </div>
-
           </div>
         </div>
       </div>
-      <script src="tabs.js"></script>
-    </div>
 
     <footer>
       <div class="container">
