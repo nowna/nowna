@@ -40,8 +40,8 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     </div>
 
     <script>
-        var myLatitude = position.coords.latitude;
-        var myLongitude = position.coords.longitude;
+        var myLatitude = navigator.geolocation.getCurrentPosition.coords.latitude;
+        var myLongitude = navigator.geolocation.getCurrentPosition.coords.longitude;
 
         var myLatLng = new google.maps.LatLng(myLatitude, myLongitude);
         var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
