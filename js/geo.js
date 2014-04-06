@@ -27,7 +27,7 @@ function showPosition(position)
 
     $.ajax({
         type: "POST",
-        url: 'location.php',
+        url: '../location.php',
         data: {
             latitude : latitude,
             longitude : longitude
