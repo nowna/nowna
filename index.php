@@ -52,8 +52,8 @@
         </div>
       </div>
       <div class="tabs mar10top">
-        <a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>
-        <button class="btn btn-small btn-default" id="tabHeader_1">Twitter</button>
+        <!--<a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>-->
+        <button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1">Refresh</button>
       </div>
       <div class="tabpage" id="tabpage_1">
         <div id="tweet_box" class="container"></div>
