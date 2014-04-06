@@ -33,7 +33,6 @@ function showPosition(position)
             longitude : longitude
         }
     }).done(function(data) {
-        alert(data);
         $('#tweet_box').html(data);
     }).fail(function() {
         alert("AJAX query failed!");

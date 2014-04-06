@@ -4,7 +4,7 @@ require_once('helper_functions.php');
 
 if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
   $url = "https://api.twitter.com/1.1/search/tweets.json";
-  $requestMethod = "POST";
+  $requestMethod = "GET";
 
 	$latitude = $_POST['latitude'];
 	$longitude = $_POST['longitude'];
