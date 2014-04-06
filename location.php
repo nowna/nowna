@@ -23,7 +23,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
       next;
     $val++;
 ?>
-
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <div class="row tweetwrapper">
   <div class="col-sm-12">
     <div class="pull-left">

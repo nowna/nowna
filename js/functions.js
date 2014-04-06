@@ -40,7 +40,7 @@ function showPosition(position)
         $('#tweet_box').html('The ajax request failed or we ran out of requests!');
     });
 }
-
+/*
 function initialize() {
     var myLatitude = navigator.geolocation.coords.latitude;
     var myLongitude = navigator.geolocation.coords.longitude;
@@ -68,3 +68,4 @@ function initialize() {
     //    title: 'Them'
     //});
 }
+*/
