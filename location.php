@@ -40,7 +40,6 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     </div>
 
     <script>
-    function initialize() {
         var myLatitude = navigator.geolocation.coords.latitude;
         var myLongitude = navigator.geolocation.coords.longitude;
 
@@ -66,10 +65,9 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         //    map: map,
         //    title: 'Them'
         //});
-    }
     </script>
 
-    <div id="map-canvas<?php echo $val ?>"></div>
+    <div id="map-canvas<?php echo $val ?>" class="map-canvas"></div>
    </div>
 </div>
 
