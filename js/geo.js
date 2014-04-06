@@ -35,9 +35,8 @@ function showPosition(position)
     })
     .done(function(data) {
         $('#tweet_box').html(data);
+        $('#refresh').html('<button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1">Refresh</button>');
     }).fail(function() {
         $('#tweet_box').html('The ajax request failed or we ran out of requests!');
     });
-
-    $('#refresh').html('<button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1'>Refresh</button>");
 }
