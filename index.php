@@ -43,17 +43,17 @@
     <div id="index">
       <div class="pad40 intro">
 
-  <?php
+        <?php
 
-  $url = "https://api.twitter.com/1.1/search/tweets.json";
-  $requestMethod = "GET";
-  $getfield = '?q=social';
+        $url = "https://api.twitter.com/1.1/search/tweets.json";
+        $requestMethod = "GET";
+        $getfield = '?q=&';
 
-  $twitter = new TwitterAPIExchange($settings);
-  echo $twitter->setGetfield($getfield)
-               ->buildOauth($url, $requestMethod)
-               ->performRequest();
-  ?>
+        $twitter = new TwitterAPIExchange($settings);
+        echo $twitter->setGetfield($getfield)
+                     ->buildOauth($url, $requestMethod)
+                     ->performRequest();
+        ?>
 
         <div class="container">
           <div class="row">
