@@ -44,7 +44,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         //var myLongitude = navigator.geolocation.coords.longitude;
 
         var myLatLng = new google.maps.LatLng(latitude, longitude);
-        var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
+        //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
 
         var mapOptions = {
             zoom: 15,
@@ -54,6 +54,11 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
 
         var map = new google.maps.Map(document.getElementById('map-canvas<?php echo $val; ?>'), mapOptions);
 
+        //var myMarker<?php echo $val; ?> = new google.maps.Marker({
+          //  position: myLatLng,
+            //map: map<?php echo $val; ?>,
+            //title: 'Marker'
+        //});
         var myMarker = new google.maps.Marker({
             position: myLatLng,
             map: map,
