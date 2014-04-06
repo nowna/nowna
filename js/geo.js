@@ -32,22 +32,10 @@ function showPosition(position)
             latitude : latitude,
             longitude : longitude
         }
-        beforeSend: function(xhr, settings) {
-            console.log('ABOUT TO SEND');
-        },
-        success: function(result, status_code, xhr) {
-            console.log('SUCCESS!');
-        },
-        complete: function(xhr, text_status) {
-            console.log('Done.');
-        },
-        error: function(xhr, text_status, error_thrown) {
-            console.log('ERROR!', text_status, error_thrown);
-        }
+    })
+    .done(function(data) {
+        $('#tweet_box').html(data);
+    }).fail(function() {
+        $('#tweet_box').html('The ajax request failed or we ran out of requests!');
     });
-    //.done(function(data) {
-    //    $('#tweet_box').html(data);
-    //}).fail(function() {
-    //    $('#tweet_box').html('The ajax request failed or we ran out of requests!');
-    //});
 }
