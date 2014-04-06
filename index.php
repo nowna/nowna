@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Delius|Inconsolata:400,700" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" />
     <link rel="stylesheet/less" href="css/main.less" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -55,6 +56,7 @@
         <div id="wrapper">
           <div id="tabContainer">
             <div class="tabs mar10top">
+              <a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>
               <button class="btn btn-small btn-default" id="tabHeader_1">Twitter</button>
               <button class="btn btn-small btn-default" id="tabHeader_2">Instagram</button>
               <button class="btn btn-small btn-default" id="tabHeader_3">Four Square</button>
