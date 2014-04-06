@@ -36,14 +36,15 @@ function showPosition(position)
     .done(function(data) {
         $('#tweet_box').html(data);
         $('#refreshButton').html('<button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1">Refresh</button>');
+        google.maps.event.addDomListener(#showButton, 'click', initializeMap);
     }).fail(function() {
         $('#tweet_box').html('The ajax request failed or we ran out of requests!');
     });
 }
 
 function initializeMap() {
-    var myLatitude = position.coords.latitude;
-    var myLongitude = position.coords.longitude;
+    var myLatitude = navigator.geolocation.coords.latitude;
+    var myLongitude = navigator.geolocation.coords.longitude;
 
     var myLatLng = new google.maps.LatLng(myLatitude, myLongitude);
     //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);

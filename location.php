@@ -17,7 +17,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     ->performRequest();
   $tjson = json_decode($resp, true);
 
-  foreach ($tjson['statuses'] as $status) {
+  foreach ($tjson['statuses'] as $status => $keys) {
     if ($status['coordinates'] === null)
       next;
 ?>
@@ -35,8 +35,8 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         </a>
         <?php echo linkify_usernames($status['text']); ?>
       </span>
-     </div>
-     <div class="map-canvas"></div>
+    </div>
+    <div class="map-canvas<?php echo $keys; ?>"></div>
    </div>
 </div>
 
@@ -44,6 +44,6 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
   }
 }
 else {
-	echo "<script>alert('Something went wrong with the AJAX request!')</script>";
+  echo "<script>alert('Something went wrong with the AJAX request!')</script>";
 }
 ?>
