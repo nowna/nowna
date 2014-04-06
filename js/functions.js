@@ -54,7 +54,8 @@ function initialize() {
         disableDefaultUI: true
     }
 
-    var map = new google.maps.Map(document.getElementByClass('map-canvas'), mapOptions);
+    for (i=0; 1)
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     var myMarker = new google.maps.Marker({
         position: myLatLng,

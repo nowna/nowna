@@ -17,7 +17,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     ->performRequest();
   $tjson = json_decode($resp, true);
 
-  foreach ($tjson['statuses'] as $status => $keys) {
+  foreach ($tjson['statuses'] as $status) {
     if ($status['coordinates'] === null)
       next;
 ?>
@@ -36,12 +36,10 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         <?php echo linkify_usernames($status['text']); ?>
       </span>
     </div>
-    <div id="map-canvas"></div>
    </div>
 </div>
 
 <?php
-  <?php echo $keys; ?>
   }
 }
 else {
