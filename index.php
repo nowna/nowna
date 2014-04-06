@@ -51,32 +51,12 @@
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <div id="wrapper">
-          <div id="tabContainer">
-            <div class="tabs mar10top">
-              <a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>
-              <button class="btn btn-small btn-default" id="tabHeader_1">Twitter</button>
-              <button class="btn btn-small btn-default" id="tabHeader_2">Instagram</button>
-              <button class="btn btn-small btn-default" id="tabHeader_3">Four Square</button>
-            </div>
-            <div class="tabscontent">
-
-              <div class="tabpage" id="tabpage_1">
-                <div id="tweet_box" class="container"></div>
-              </div>
-
-              <div class="tabpage" id="tabpage_2">
-              </div>
-
-              <div class="tabpage" id="tabpage_3">
-              </div>
-
-            </div>
-          </div>
-          <script src="js/tabs.js"></script>
-        </div>
+      <div class="tabs mar10top">
+        <a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>
+        <button class="btn btn-small btn-default" id="tabHeader_1">Twitter</button>
+      </div>
+      <div class="tabpage" id="tabpage_1">
+        <div id="tweet_box" class="container"></div>
       </div>
     </div>
 
