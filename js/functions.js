@@ -13,14 +13,17 @@ function getLocation()
     }
 }
 
+var latitude = "";
+var longitude = "";
+
 function showPosition(position)
 {
     console.log("post the position");
     console.log("Latitude: " + position.coords.latitude +
                 "    Longitude: " + position.coords.longitude);
 
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
+    latitude = position.coords.latitude;
+    longitude = position.coords.longitude;
 
     var location = document.getElementById("location");
     location.innerHTML = latitude + ", " + longitude;
