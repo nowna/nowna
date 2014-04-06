@@ -36,26 +36,37 @@ function showPosition(position)
     .done(function(data) {
         $('#tweet_box').html(data);
         $('#refreshButton').html('<button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1">Refresh</button>');
-        initializeMap(latitude, longitude);
+        //initializeMap();
+        google.maps.event.addDomListener(window, 'load', initializeMap);
     }).fail(function() {
         $('#tweet_box').html('The ajax request failed or we ran out of requests!');
     });
 }
 
-function initializeMap(lat, lng) {
-  var myLatlng = new google.maps.LatLng(lat, lng);
+function initializeMap() {
+    var myLatitude = position.coords.latitude;
+    var myLongitude = position.coords.longitude;
 
-  var mapOptions = {
-    zoom: 15,
-    center: myLatLng,
-    disableDefaultUI: true
-  }
+    var myLatLng = new google.maps.LatLng(myLatitude, myLongitude);
+    //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
 
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var mapOptions = {
+        zoom: 15,
+        center: myLatLng,
+        disableDefaultUI: true
+    }
 
-  var myMarker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'You'
-  });
+    var map = new google.maps.Map(document.getElementByClass('map-canvas'), mapOptions);
+
+    var myMarker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'You'
+    });
+
+    //var theirMarker = new google.maps.Marker({
+    //    position: theirLatlng,
+    //    map: map,
+    //    title: 'Them'
+    //});
 }
