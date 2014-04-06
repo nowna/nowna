@@ -25,21 +25,17 @@ function showPosition(position)
     var location = document.getElementById("location");
     location.innerHTML = latitude + ", " + longitude;
 
-    $(document).ready(function() {
-        $("#locationButton").click(function() {
-            
-            //alert($(this).attr('id'));
-            $.ajax({
-                type: "POST",
-                url: 'location.php',
-                data: {
-                    latitude : longitude,
-                    longitude : longitude
-                }
-            }).fail(function() {
-                alert("AJAX query failed!");
-            });
-        });
+    $.ajax({
+        type: "POST",
+        url: 'location.php',
+        data: {
+            latitude : latitude,
+            longitude : longitude
+        }
+    }).done(function(data) {
+        alert(data);
+        $('#tweet_box').html(data);
+    }).fail(function() {
+        alert("AJAX query failed!");
     });
-
 }

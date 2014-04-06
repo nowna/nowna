@@ -1,18 +1,3 @@
-<?php
-require_once('config.php'); //contains $settings variable for the API
-require_once('helper_functions.php');
-
-$url = "https://api.twitter.com/1.1/search/tweets.json";
-$requestMethod = "GET";
-$getfield = '?q=&geocode=40.7484,73.9857,10mi&result_type=recent';
-
-$twitter = new TwitterAPIExchange($twitterSettings);
-$resp = $twitter->setGetfield($getfield)
-          ->buildOauth($url, $requestMethod)
-          ->performRequest();
-$tjson = json_decode($resp, true);
-?>
-
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
@@ -26,7 +11,6 @@ $tjson = json_decode($resp, true);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="js/geo.js"></script>
-    <script src="js/ajax.js"></script>
 </head>
 <body>
 	<header>
@@ -54,13 +38,12 @@ $tjson = json_decode($resp, true);
 
     <div id="index">
       <div class="pad40 intro">
-        <!-- <?php echo $resp; ?> -->
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
               <h1 class="huge center ts">Discover events near you</h1>
               <h2 class="huge center ts pad10bot">based on Twitter.</h2>
-              <button type="button" class="btn btn-success btn-lg" onclick="getLocation()" id="locationButton">
+              <button type="button" class="btn btn-success btn-lg" onclick="getLocation()">
                 Show me what's happening NowNa &raquo;
               </button>
             </div>
@@ -68,30 +51,8 @@ $tjson = json_decode($resp, true);
         </div>
       </div>
 
-      <div class="container">
-        <!-- Tweets go here -->
-        <?php
-          foreach ($tjson['statuses'] as $status) {
-        ?>
-        <div class="row">
-          <div class="col-sm-12 tweetwrapper">
-            <div class="pull-left">
-              <img src="<?php echo $status['user']['profile_image_url']; ?>"
-                   alt="<?php echo $status['user']['screen_name']; ?>"
-                   title="<?php echo $status['user']['screen_name']; ?>"
-                   class="img-responsive img-thumbnail" />
-              <span class="tweet" title="<?php echo $status['user']['created_at']; ?>">
-                <a href="https://twitter.com/<?php echo $status['user']['screen_name']; ?>">
-                  @<?php echo $status['user']['screen_name']; ?>
-                </a>
-                <?php echo linkify_usernames($status['text']); ?>
-              </span>
-            </div>
-          </div>
-        </div>
-        <?php } ?>
-        <!-- end tweets -->
-      </div>
+      <div id="tweet_box" class="container"></div>
+    </div>
 
     <footer>
       <div class="container">
