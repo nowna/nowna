@@ -71,7 +71,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
             position: theirLatlng,
             map: map<?php echo $val; ?>,
             title: 'Them<?php echo $val; ?>'
-        //});
+        });
     </script>
 
     <div id="map-canvas<?php echo $val ?>" class="map-canvas"></div>
