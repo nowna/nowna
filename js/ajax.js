@@ -9,6 +9,8 @@ $(document).ready(function() {
                 latitude : longitude,
                 longitude : longitude
             }
+        }).fail(function() {
+            alert("AJAX query failed!");
         });
     });
 });
