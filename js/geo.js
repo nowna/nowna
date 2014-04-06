@@ -32,16 +32,16 @@ function showPosition(position)
             latitude : latitude,
             longitude : longitude
         }
-        'beforeSend': function(xhr, settings) {
+        beforeSend: function(xhr, settings) {
             console.log('ABOUT TO SEND');
         },
-        'success': function(result, status_code, xhr) {
+        success: function(result, status_code, xhr) {
             console.log('SUCCESS!');
         },
-        'complete': function(xhr, text_status) {
+        complete: function(xhr, text_status) {
             console.log('Done.');
         },
-        'error': function(xhr, text_status, error_thrown) {
+        error: function(xhr, text_status, error_thrown) {
             console.log('ERROR!', text_status, error_thrown);
         }
     });

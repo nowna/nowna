@@ -57,7 +57,7 @@
             <div class="tabs mar10top">
               <button class="btn btn-small btn-default" id="tabHeader_1">Twitter</button>
               <button class="btn btn-small btn-default" id="tabHeader_2">Instagram</button>
-              <button class="btn btn-small btn-default" id="tabHeader_3">Something Else</button>
+              <button class="btn btn-small btn-default" id="tabHeader_3">Four Square</button>
             </div>
             <div class="tabscontent">
 
