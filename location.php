@@ -22,8 +22,8 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
       next;
 ?>
 
-<div class="row">
-   <div class="col-sm-12 tweetwrapper">
+<div class="row tweetwrapper">
+   <div class="col-sm-12">
      <div class="pull-left">
        <img src="<?php echo $status['user']['profile_image_url']; ?>"
             alt="<?php echo $status['user']['screen_name']; ?>"
