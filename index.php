@@ -14,7 +14,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script src="js/functions.js"></script>
     <script>
-    google.maps.event.addDomListener(document.getElementById('showButton'), 'onclick', function(){ initialize(); });
+    google.maps.event.addDomListener(document.getElementById('showButton'), 'onclick', initialize);
     </script>
 </head>
 <body>
