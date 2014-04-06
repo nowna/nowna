@@ -34,7 +34,10 @@ function showPosition(position)
         }
     }).done(function(data) {
         $('#tweet_box').html(data);
-    }).fail(function() {
-        $('#tweet_box').html('The ajax request failed or we ran out of requests!');
+    }).fail( function(xhr, textStatus, errorThrown) {
+        alert(xhr.responseText);
     });
+    //.fail(function() {
+    //    $('#tweet_box').html('The ajax request failed or we ran out of requests!');
+    //});
 }
