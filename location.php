@@ -9,7 +9,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
 	$latitude = $_POST['latitude'];
 	$longitude = $_POST['longitude'];
 
-  $getfield = '?q=&geocode='.$latitude.','.$longitude.',1mi&result_type=recent';
+  $getfield = '?q=&geocode='.$latitude.','.$longitude.',1mi&result_type=mixed';
 
   $twitter = new TwitterAPIExchange($twitterSettings);
   $resp = $twitter->setGetfield($getfield)
@@ -44,7 +44,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         //var myLatitude = navigator.geolocation.coords.latitude;
         //var myLongitude = navigator.geolocation.coords.longitude;
 
-        var myLatLng = new google.maps.LatLng(latitude, longitude);
+        var myLatLng = new google.maps.LatLng(<?php echo $latitude ?>, <?php echo $longitude ?>);
         //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
 
         var mapOptions = {
