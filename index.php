@@ -55,12 +55,10 @@
       <div class="container">
         <div id="wrapper">
           <div id="tabContainer">
-            <div class="tabs">
-              <ul>
-                <li id="tabHeader_1">Page 1</li>
-                <li id="tabHeader_2">Page 2</li>
-                <li id="tabHeader_3">Page 3</li>
-              </ul>
+            <div class="tabs mar10top">
+              <button class="btn btn-small btn-default" id="tabHeader_1">Page 1</button>
+              <button class="btn btn-small btn-default" id="tabHeader_2">Page 2</button>
+              <button class="btn btn-small btn-default" id="tabHeader_3">Page 3</button>
             </div>
             <div class="tabscontent">
 
