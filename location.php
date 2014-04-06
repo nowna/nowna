@@ -43,6 +43,6 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
   }
 }
 else {
-	echo "<script>alert('Something went wrong with the AJAX request!')";
+	echo "<script>alert('Something went wrong with the AJAX request!')</script>";
 }
 ?>

@@ -54,7 +54,8 @@
       <div class="mar10top" id="refresh">
         <!--<a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>-->
       </div>
-      <div class="tabpage" id="tabpage_1">
+      <div id="tweetwrapper">
+        <div id="refreshButton"></div>
         <div id="tweet_box" class="container"></div>
       </div>
     </div>
