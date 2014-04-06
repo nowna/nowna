@@ -35,7 +35,9 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         <a href="https://twitter.com/<?php echo $status['user']['screen_name']; ?>">
           @<?php echo $status['user']['screen_name']; ?>
         </a>
-        <?php echo linkify_usernames($status['text']); ?>
+        <?php echo linkify_usernames($status['text']);
+          echo $status['coordinates'];
+        ?>
       </span>
     </div>
 
