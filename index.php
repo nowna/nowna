@@ -13,6 +13,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC-8qQw6BCorqyWEkV5psNf9q2SvrpIf4Y&sensor=true"></script>
     <script src="js/functions.js"></script>
+    <title>NowNa!</title>
 </head>
 <body>
 	<header>
