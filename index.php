@@ -37,6 +37,20 @@
     </header>
 
     <div id="index">
+      <div class="pad40 intro">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <h1 class="huge center ts">Discover events near you</h1>
+              <h2 class="huge center ts pad10bot">based on Twitter.</h2>
+              <button type="button" class="btn btn-success btn-lg removeWhiteSpace" onclick="getLocation()">
+                Show me what's happening NowNa &raquo;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div id="wrapper">
         <div id="tabContainer">
           <div class="tabs">
@@ -46,23 +60,22 @@
               <li id="tabHeader_3">Page 3</li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div class="pad40 intro">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1 class="huge center ts">Discover events near you</h1>
-              <h2 class="huge center ts pad10bot">based on Twitter.</h2>
-              <button type="button" class="btn btn-success btn-lg" onclick="getLocation()">
-                Show me what's happening NowNa &raquo;
-              </button>
+          <div class="tabscontent">
+
+            <div class="tabpage" id="tabpage_1">
+              <div id="tweet_box" class="container"></div>
             </div>
+
+            <div class="tabpage" id="tabpage_2">
+            </div>
+
+            <div class="tabpage" id="tabpage_3">
+            </div>
+
           </div>
         </div>
       </div>
-
-      <div id="tweet_box" class="container"></div>
+      <script src="tabs.js"></script>
     </div>
 
     <footer>
