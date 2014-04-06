@@ -40,10 +40,11 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     </div>
 
     <script>
-        //var myLatitude = navigator.geolocation.coords.latitude;
-        //var myLongitude = navigator.geolocation.coords.longitude;
-
         var myLatLng = new google.maps.LatLng(latitude, longitude);
+
+        //Add twitter lat and lang vars here
+
+
         //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
 
         var mapOptions = {
@@ -53,12 +54,6 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         }
 
         var map<?php echo $val; ?> = new google.maps.Map(document.getElementById('map-canvas<?php echo $val; ?>'), mapOptions);
-
-        //var myMarker<?php echo $val; ?> = new google.maps.Marker({
-          //  position: myLatLng,
-            //map: map<?php echo $val; ?>,
-            //title: 'Marker'
-        //});
 
         //var theirMarker = new google.maps.Marker({
         //    position: theirLatlng,
