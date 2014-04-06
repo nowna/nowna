@@ -44,8 +44,10 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         //var myLatitude = navigator.geolocation.coords.latitude;
         //var myLongitude = navigator.geolocation.coords.longitude;
 
-        var myLatLng = new google.maps.LatLng(<?php echo $latitude ?>, <?php echo $longitude ?>);
+        var myLatLng = new google.maps.LatLng(latitude, longitude);
         //var theirLatlng = new google.maps.LatLng(myLatitude, myLongitude);
+        console.log(latitude);
+        console.log(longitude);
 
         var mapOptions = {
             zoom: 15,
