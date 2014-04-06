@@ -27,7 +27,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     echo '           alt="'.$status['user']['screen_name'].'"';
     echo '           title="'.$status['user']['screen_name'].'"';
     echo '           class="img-responsive img-thumbnail" />';
-    echo '      <span class="tweet" title="'.$status['user']['created_at'].'">';
+    echo '      <span class="tweet" title="'.$status['created_at'].'">';
     echo '        <a href="https://twitter.com/'.$status['user']['screen_name'].'">';
     echo '          @'.$status['user']['screen_name'];
     echo '        </a>';
