@@ -41,7 +41,7 @@ function showPosition(position)
     });
 }
 
-function initializeMap() {
+function initialize() {
     var myLatitude = navigator.geolocation.coords.latitude;
     var myLongitude = navigator.geolocation.coords.longitude;
 
