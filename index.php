@@ -59,7 +59,7 @@ $tjson = json_decode($resp, true);
             <div class="col-sm-12">
               <h1 class="huge center ts">Discover events near you</h1>
               <h2 class="huge center ts pad10bot">based on Twitter.</h2>
-              <button type="button" class="btn btn-success btn-lg" onclick="getLocation()">
+              <button type="button" class="btn btn-success btn-lg" onclick="getLocation()" id="locationButton">
                 Show me what's happening NowNa &raquo;
               </button>
             </div>
