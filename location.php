@@ -24,6 +24,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     $val++;
 ?>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-8qQw6BCorqyWEkV5psNf9q2SvrpIf4Y&sensor=true"></script>
+<script src="js/functions.js"></script>
 <div class="row tweetwrapper">
   <div class="col-sm-12">
     <div class="pull-left">
