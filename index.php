@@ -42,7 +42,6 @@ require_once('config.php'); //contains $settings variable for the API
 
     <div id="index">
       <div class="pad40 intro">
-
         <?php
 
         $url = "https://api.twitter.com/1.1/search/tweets.json";
@@ -50,10 +49,11 @@ require_once('config.php'); //contains $settings variable for the API
         $getfield = '?q=&geocode=40.7484,73.9857,10mi';
 
         $twitter = new TwitterAPIExchange($twitterSettings);
-        echo $twitter->setGetfield($getfield)
-                     ->buildOauth($url, $requestMethod)
-                     ->performRequest();
-
+        $tjson = json_decode(
+          $twitter->setGetfield($getfield)
+            ->buildOauth($url, $requestMethod)
+            ->performRequest(),
+          true);
         ?>
 
         <div class="container">
@@ -69,32 +69,20 @@ require_once('config.php'); //contains $settings variable for the API
 
       <div class="container">
         <!-- Tweets go here -->
+        <?php
+          foreach ($tjson['statuses'] as $status) {
+        ?>
         <div class="row">
           <div class="col-sm-12 tweetwrapper">
-            <img src="http://da.gd/image/73x73.png?text=x" alt="40x40" class="img-responsive img-thumbnail" />
+            <img src="<?php echo $status['user']['profile_image_url']; ?>"
+                 alt="<?php echo $status['user']['screen_name']; ?>"
+                 class="img-responsive img-thumbnail" />
             <span class="tweet">
-              This is a tweet. foo bar baz buzz.
+              <?php echo $status['text']; ?>
             </span>
           </div>
         </div>
-
-        <div class="row">
-          <div class="col-sm-12 tweetwrapper">
-            <img src="http://da.gd/image/73x73.png?text=x" alt="40x40" class="img-responsive img-thumbnail" />
-            <span class="tweet">
-              This is a tweet. foo bar baz buzz.
-            </span>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12 tweetwrapper">
-            <img src="http://da.gd/image/73x73.png?text=x" alt="40x40" class="img-responsive img-thumbnail" />
-            <span class="tweet">
-              This is a tweet. foo bar baz buzz.
-            </span>
-          </div>
-        </div>
+        <?php } ?>
         <!-- end tweets -->
       </div>
 
