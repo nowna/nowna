@@ -9,7 +9,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
 	$latitude = $_POST['latitude'];
 	$longitude = $_POST['longitude'];
 
-  $getfield = '?q=&geocode='.$latitude.','.$longitude.',10mi&result_type=mixed';
+  $getfield = '?q=&geocode='.$latitude.','.$longitude.',5mi&result_type=recent';
 
   $twitter = new TwitterAPIExchange($twitterSettings);
   $resp = $twitter->setGetfield($getfield)
