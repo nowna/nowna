@@ -20,26 +20,29 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
   foreach ($tjson['statuses'] as $status) {
     if ($status['coordinates'] === null)
       next;
-    echo '<div class="row">';
-    echo '  <div class="col-sm-12 tweetwrapper">';
-    echo '    <div class="pull-left">';
-    echo '      <img src="'.$status['user']['profile_image_url'].'"';
-    echo '           alt="'.$status['user']['screen_name'].'"';
-    echo '           title="'.$status['user']['screen_name'].'"';
-    echo '           class="img-responsive img-thumbnail" />';
-    echo '      <span class="tweet" title="'.$status['created_at'].'">';
-    echo '        <a href="https://twitter.com/'.$status['user']['screen_name'].'">';
-    echo '          @'.$status['user']['screen_name'];
-    echo '        </a>';
-    echo linkify_usernames($status['text']);
-    echo '      </span>';
-    echo '    </div>';
-    echo '  </div>';
-    echo '</div>';
+?>
+
+<div class="row">
+   <div class="col-sm-12 tweetwrapper">
+     <div class="pull-left">
+       <img src="<?php echo $status['user']['profile_image_url']; ?>"
+            alt="<?php echo $status['user']['screen_name']; ?>"
+            title="<?php echo $status['user']['screen_name']; ?>"
+            class="img-responsive img-thumbnail" />
+       <span class="tweet" title="<?php echo $status['created_at']; ?>">
+         <a href="https://twitter.com/<?php echo $status['user']['screen_name']; ?>">
+           @<?php echo $status['user']['screen_name']; ?>
+         </a>
+         <?php echo linkify_usernames($status['text']); ?>
+       </span>
+     </div>
+   </div>
+</div>
+
+<?php
   }
 }
 else {
 	echo "<script>alert('Something went wrong with the AJAx request!')";
 }
-
 ?>
