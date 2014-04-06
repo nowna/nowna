@@ -11,7 +11,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="js/tabs.js"></script>
     <script src="js/geo.js"></script>
 </head>
 <body>
@@ -76,6 +75,7 @@
 
             </div>
           </div>
+          <script src="js/tabs.js"></script>
         </div>
       </div>
 
