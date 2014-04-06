@@ -34,10 +34,8 @@ function showPosition(position)
         }
     }).done(function(data) {
         $('#tweet_box').html(data);
-    }).fail( function(xhr, textStatus, errorThrown) {
-        console.log(xhr.statusText);
-        console.log(textStatus);
-        console.log(error);
+    }).fail( function() {
+        alert("Error with AJAX request!");
     });
     //.fail(function() {
     //    $('#tweet_box').html('The ajax request failed or we ran out of requests!');
