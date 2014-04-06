@@ -18,6 +18,8 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
   $tjson = json_decode($resp, true);
 
   foreach ($tjson['statuses'] as $status) {
+    if ($status['coordinates'] === null)
+      next;
     echo '<div class="row">';
     echo '  <div class="col-sm-12 tweetwrapper">';
     echo '    <div class="pull-left">';
