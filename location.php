@@ -38,7 +38,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         <?php echo linkify_usernames($status['text']); ?>
       </span>
     </div>
-    <div id="map-canvas<?php $val ?>"></div>
+    <div id="map-canvas<?php echo $val ?>"></div>
    </div>
 </div>
 
