@@ -76,6 +76,7 @@ require_once('config.php'); //contains $settings variable for the API
           <div class="col-sm-12 tweetwrapper">
             <img src="<?php echo $status['user']['profile_image_url']; ?>"
                  alt="<?php echo $status['user']['screen_name']; ?>"
+                 title="<?php echo $status['user']['screen_name']; ?>"
                  class="img-responsive img-thumbnail" />
             <span class="tweet">
               <?php echo $status['text']; ?>
