@@ -35,7 +35,7 @@ function showPosition(position)
     })
     .done(function(data) {
         $('#tweet_box').html(data);
-        $('#refreshButton').html('<button href="javascript:getLocation()" id="tabHeader_1">Refresh</button>');
+        $('#refreshButton').html('<button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1">Refresh</button>');
         initializeMap(latitude, longitude);
     }).fail(function() {
         $('#tweet_box').html('The ajax request failed or we ran out of requests!');
