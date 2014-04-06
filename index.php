@@ -53,7 +53,7 @@
         </div>
       </div>
       <div class="mar10top" id="refresh">
-        <!--<a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>-->
+        <a href="javascript:getLocation()" class="black"><i class="fa fa-refresh"></i></a>
       </div>
       <div id="tweetwrapper">
         <div id="refreshButton"></div>
