@@ -17,9 +17,11 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
     ->performRequest();
   $tjson = json_decode($resp, true);
 
+  $val = 0;
   foreach ($tjson['statuses'] as $status) {
     if ($status['coordinates'] === null)
       next;
+    $val++;
 ?>
 
 <div class="row tweetwrapper">
@@ -36,6 +38,7 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
         <?php echo linkify_usernames($status['text']); ?>
       </span>
     </div>
+    <div id="map-canvas<?php $val ?>"></div>
    </div>
 </div>
 
