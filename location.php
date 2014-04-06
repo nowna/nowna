@@ -52,18 +52,13 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
             disableDefaultUI: true
         }
 
-        var map = new google.maps.Map(document.getElementById('map-canvas<?php echo $val; ?>'), mapOptions);
+        var map<?php echo $val; ?> = new google.maps.Map(document.getElementById('map-canvas<?php echo $val; ?>'), mapOptions);
 
         //var myMarker<?php echo $val; ?> = new google.maps.Marker({
           //  position: myLatLng,
             //map: map<?php echo $val; ?>,
             //title: 'Marker'
         //});
-        var myMarker = new google.maps.Marker({
-            position: myLatLng,
-            map: map,
-            title: 'Marker<?php echo $val; ?>'
-        });
 
         //var theirMarker = new google.maps.Marker({
         //    position: theirLatlng,
