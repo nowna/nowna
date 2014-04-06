@@ -49,7 +49,7 @@
         $requestMethod = "GET";
         $getfield = '?q=&';
 
-        $twitter = new TwitterAPIExchange($settings);
+        $twitter = new TwitterAPIExchange($twitterSettings);
         echo $twitter->setGetfield($getfield)
                      ->buildOauth($url, $requestMethod)
                      ->performRequest();
