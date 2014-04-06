@@ -38,7 +38,7 @@ $tjson = json_decode($resp, true);
               <span class="icon-bar" />
               <span class="icon-bar" />
             </button>
-            <a class="navbar-brand" href="/">Nowna</a>
+            <a class="navbar-brand" href="/">NowNa</a>
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -57,9 +57,11 @@ $tjson = json_decode($resp, true);
         <div class="container">
           <div class="row">
             <div class="col-sm-12">
-              <h1 class="huge center">Discover events near you</h1>
-              <h2 class="huge center pad10bot">based on Twitter.</h2>
-              <button type="button" class="btn btn-default btn-lg" onclick="getLocation()">Show me what's happening NowNa!</button>
+              <h1 class="huge center ts">Discover events near you</h1>
+              <h2 class="huge center ts pad10bot">based on Twitter.</h2>
+              <button type="button" class="btn btn-success btn-lg" onclick="getLocation()">
+                Show me what's happening NowNa &raquo;
+              </button>
             </div>
           </div>
         </div>
@@ -92,7 +94,7 @@ $tjson = json_decode($resp, true);
 
     <footer>
       <div class="container">
-        &copy; 2014 The Nowna team
+        &copy; 2014 The NowNa team
       </div>
     </footer>
 </body>
