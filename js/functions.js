@@ -1,6 +1,6 @@
 function getLocation()
 {
-    $('.intro').hide();
+    $('.intro').slideUp("slow");
 
     if (navigator.geolocation)
     {
@@ -35,8 +35,27 @@ function showPosition(position)
     })
     .done(function(data) {
         $('#tweet_box').html(data);
-        $('#refreshButton').html('<button href="javascript:getLocation()" class="btn btn-small btn-default fa fa-refresh" id="tabHeader_1">Refresh</button>');
+        $('#refreshButton').html('<button href="javascript:getLocation()" id="tabHeader_1">Refresh</button>');
+        initializeMap(latitude, longitude);
     }).fail(function() {
         $('#tweet_box').html('The ajax request failed or we ran out of requests!');
     });
+}
+
+function initializeMap(lat, lng) {
+  var myLatlng = new google.maps.LatLng(lat, lng);
+
+  var mapOptions = {
+    zoom: 15,
+    center: myLatLng,
+    disableDefaultUI: true
+  }
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var myMarker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'You'
+  });
 }

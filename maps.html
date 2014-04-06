@@ -14,7 +14,7 @@
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
     <script>
-function initialize() {
+function initializeMap() {
   var myLatlng = new google.maps.LatLng(40.7484, -73.9857);
 
   var theirLatlng = new google.maps.LatLng(40.7464, -73.9857);
@@ -41,7 +41,7 @@ function initialize() {
   
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'load', initializeMap);
 
     </script>
   </head>
