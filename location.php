@@ -54,11 +54,11 @@ if(isset($_POST['latitude']) && isset($_POST['longitude'])) {
 
         var map<?php echo $val; ?> = new google.maps.Map(document.getElementById('map-canvas<?php echo $val; ?>'), mapOptions);
 
-        var myMarker<?php echo $val; ?> = new google.maps.Marker({
-            position: myLatLng,
-            map: map<?php echo $val; ?>,
-            title: 'Marker'
-        });
+        //var myMarker<?php echo $val; ?> = new google.maps.Marker({
+          //  position: myLatLng,
+            //map: map<?php echo $val; ?>,
+            //title: 'Marker'
+        //});
 
         //var theirMarker = new google.maps.Marker({
         //    position: theirLatlng,
